@@ -45,7 +45,7 @@ steps:
     PathtoPublish: $(build.artifactstagingdirectory)
 
 - task: AzureRmWebAppDeployment@4
-  displayName: 'Azure App Service Deploy: my-app-name'
+  displayName: 'Azure App Service Deploy: $(appName)'
   inputs:
     azureSubscription: $(serviceConnectionToAzure)
     appType: webAppLinux
